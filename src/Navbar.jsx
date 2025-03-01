@@ -1,20 +1,94 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: '#2C3E50' }}>
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          My Portfolio
+        <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', color: '#ECF0F1' }}>
+          Pavan
         </Typography>
-        <Link to="/" style={{ textDecoration: "none", color: "white", marginRight: "15px" }}>Home</Link>
-        <Link to="/about" style={{ textDecoration: "none", color: "white", marginRight: "15px" }}>About</Link>
-        <Link to="/education" style={{ textDecoration: "none", color: "white", marginRight: "15px" }}>Education</Link>
-        <Link to="/skills" style={{ textDecoration: "none", color: "white", marginRight: "15px" }}>Skills</Link>
-        <Link to="/experience" style={{ textDecoration: "none", color: "white", marginRight: "15px" }}>Experience</Link>
-        <Link to="/projects" style={{ textDecoration: "none", color: "white", marginRight: "15px" }}>Projects</Link>    
+        <Box sx={{ display: 'flex', gap: 3 }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Button 
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#3498DB', 
+                  color: '#fff'
+                }
+              }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link to="/about" style={{ textDecoration: "none" }}>
+            <Button 
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#3498DB', 
+                  color: '#fff'
+                }
+              }}
+            >
+              About
+            </Button>
+          </Link>
+          <Link to="/education" style={{ textDecoration: "none" }}>
+            <Button 
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#3498DB', 
+                  color: '#fff'
+                }
+              }}
+            >
+              Education
+            </Button>
+          </Link>
+          <Link to="/skills" style={{ textDecoration: "none" }}>
+            <Button 
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#3498DB', 
+                  color: '#fff'
+                }
+              }}
+            >
+              Skills
+            </Button>
+          </Link>
+          <Link to="/experience" style={{ textDecoration: "none" }}>
+            <Button 
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#3498DB', 
+                  color: '#fff'
+                }
+              }}
+            >
+              Experience
+            </Button>
+          </Link>
+          <Link to="/projects" style={{ textDecoration: "none" }}>
+            <Button 
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#3498DB', 
+                  color: '#fff'
+                }
+              }}
+            >
+              Projects
+            </Button>
+          </Link>
+        </Box>
       </Toolbar>
     </AppBar>
   );

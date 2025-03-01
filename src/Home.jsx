@@ -2,8 +2,10 @@ import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CodeIcon from '@mui/icons-material/Code';  // Importing CodeIcon
 import { motion } from 'framer-motion';
 import About from './About';
+
 function Home() {
   return (
     <motion.div
@@ -13,32 +15,28 @@ function Home() {
     >
       <Box
         sx={{
-          minHeight: '100vh', // Use min-height instead of fixed height
+          minHeight: '100vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
-          backgroundColor: '#f0f0f0',
-          padding: { xs: '10px', sm: '20px' }, // Responsive padding
+          backgroundColor: '#f7f7f7',
+          padding: { xs: '10px', sm: '20px' },
           borderRadius: '15px',
-          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-          width: '100%', // Ensure full width
-          overflow: 'hidden', // Prevent overflow issues
+          boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+          width: '100%',
+          overflow: 'hidden',
         }}
       >
-        {/* Profile Picture */}
-        <img
-          src="https://your-profile-picture-url.com" // Replace with your profile picture URL
-          alt=""
-          style={{
-            width: 'clamp(100px, 20vw, 150px)', // Responsive width
-            height: 'clamp(100px, 20vw, 150px)', // Responsive height
-            borderRadius: '50%',
+        {/* CodeIcon as Profile Image */}
+        {/* <CodeIcon
+          sx={{
+            fontSize: '150px',
+            color: '#000',  // Set color to black
             marginBottom: '20px',
-            objectFit: 'cover', // Ensure the image scales properly
           }}
-        />
+        /> */}
 
         {/* Name */}
         <Typography
@@ -48,6 +46,7 @@ function Home() {
             fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
             fontWeight: 'bold',
             lineHeight: '1.2',
+            color: '#2C3E50',
           }}
         >
           MAMIDI PAVAN REDDY
@@ -82,12 +81,16 @@ function Home() {
           <Button
             variant="contained"
             startIcon={<GitHubIcon />}
-            href="https://github.com/your-username" // Replace with your GitHub URL
+            href="https://github.com/MamidiPavanReddy"
             target="_blank"
             rel="noopener noreferrer"
             sx={{
               fontSize: { xs: '0.875rem', sm: '1rem' },
               padding: { xs: '8px 12px', sm: '10px 16px' },
+              backgroundColor: '#333',
+              '&:hover': {
+                backgroundColor: '#2C3E50',
+              },
             }}
           >
             GitHub
@@ -95,12 +98,16 @@ function Home() {
           <Button
             variant="contained"
             startIcon={<LinkedInIcon />}
-            href="https://linkedin.com/in/your-username" // Replace with your LinkedIn URL
+            href="https://www.linkedin.com/in/mamidi-pavan-reddy-9202b41b6/"
             target="_blank"
             rel="noopener noreferrer"
             sx={{
               fontSize: { xs: '0.875rem', sm: '1rem' },
               padding: { xs: '8px 12px', sm: '10px 16px' },
+              backgroundColor: '#0077B5',
+              '&:hover': {
+                backgroundColor: '#005C8C',
+              },
             }}
           >
             LinkedIn
@@ -114,13 +121,22 @@ function Home() {
             mt: 2,
             fontSize: { xs: '0.875rem', sm: '1rem' },
             padding: { xs: '8px 12px', sm: '10px 16px' },
+            borderColor: '#3498DB',
+            color: '#3498DB',
+            '&:hover': {
+              borderColor: '#2980B9',
+              backgroundColor: '#2980B9',
+              color: '#fff',
+            },
           }}
-          href="Projects" // Link to the Projects section
+          href="/projects"
         >
           View My Work
         </Button>
       </Box>
-       <About></About>
+
+      {/* About Section */}
+      <About />
     </motion.div>
   );
 }

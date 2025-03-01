@@ -12,7 +12,7 @@ function Footer() {
       }}
     >
       <Typography variant="body1">
-        © 2023 MAMIDI PAVAN REDDY. All rights reserved.
+        © 2025 MAMIDI PAVAN REDDY. All rights reserved.
       </Typography>
     </Box>
   );
